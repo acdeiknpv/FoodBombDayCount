@@ -1,0 +1,25 @@
+.alignCenter {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.textAlign {
+    text-align: center;
+    margin-top: 10%;
+}
+
+li{
+    list-style-type: none;
+}
+
+ol {
+    padding-left: 0;
+}
+
+.odd {
+    background-color: rgb(209, 201, 201);
+}
+
+.even {
+    background-color: rgba(209, 201, 201, 0.500);
+}

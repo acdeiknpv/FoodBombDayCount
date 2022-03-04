@@ -1,0 +1,16 @@
+.endDate {
+    display: grid;
+}
+
+.startDate {
+    display: grid;
+}
+
+.alignCenter {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hidden {
+    display: none;
+}
