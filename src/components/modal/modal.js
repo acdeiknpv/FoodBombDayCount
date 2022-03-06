@@ -2,7 +2,7 @@ import React from 'react';
 
 class Modal extends React.Component {
     render() {
-        var modal = '';
+        let modal = '';
         if (this.props.type === 0) {
             modal = <div className="alert alert-success" role="alert">
                 {this.props.message}

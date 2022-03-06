@@ -29,7 +29,7 @@ class ProjectForm extends React.Component {
 
         if (dateVerifier(this.state.startDate) !== -1 && dateVerifier(this.state.endDate) !== -1) {
             if (dateOrder(this.state.startDate, this.state.endDate) !== -1) {
-                var dayDifference = dateCounter(this.state.startDate, this.state.endDate);
+                let dayDifference = dateCounter(this.state.startDate, this.state.endDate);
                 this.props.handleHistory(this.state.startDate, this.state.endDate, dayDifference);
                 this.setState({modal: true, modalType: 0, modalMessage: "Data pushed"});
             }

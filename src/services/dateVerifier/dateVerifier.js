@@ -8,7 +8,7 @@ export function yearVerifier(year) {
 }
 
 export function dayVerifier(day, month, leap) {
-    var maxDayInMonth = 0;
+    let maxDayInMonth = 0;
 
     if (month > 7) {
         if (month % 2 === 0) {
@@ -42,13 +42,13 @@ export function dayVerifier(day, month, leap) {
 export function dateVerifier(date) {
     if (date) {
         var splitedDate = date.split('/');
-        var year = splitedDate[2];
-        var month = splitedDate[1];
-        var day = splitedDate[0];
+        let year = splitedDate[2];
+        let month = splitedDate[1];
+        let day = splitedDate[0];
 
         if (!yearVerifier(year)) { return -1; };
 
-        var leap = leapYearVerifier(year);
+        let leap = leapYearVerifier(year);
 
         if (!dayVerifier(day, month, leap)) { return -1; };
 

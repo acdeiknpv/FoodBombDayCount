@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   render() {
-    var handleHistory = this.handleHistory;
+    let handleHistory = this.handleHistory;
 
     return (
       <div>

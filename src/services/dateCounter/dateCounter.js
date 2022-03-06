@@ -3,7 +3,7 @@ import { leapYearVerifier } from "../dateVerifier/dateVerifier";
 export function dayNumberInYear(day, month, year) {
     const dayPerMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     var dayCount = 0;
-    for (var i = 0; i < month - 1; i++) {
+    for (let i = 0; i < month - 1; i++) {
         dayCount += dayPerMonth[i];
     }
     dayCount += day - 1;
@@ -33,16 +33,16 @@ export function dateCounter(startDate, endDate) {
     var splitedStartDate = startDate.split('/');
     var splitedEndDate = endDate.split('/');
 
-    var d1 = splitedStartDate[0],
+    let d1 = splitedStartDate[0],
         m1 = splitedStartDate[1],
         y1 = splitedStartDate[2];
 
-    var d2 = splitedEndDate[0],
+    let d2 = splitedEndDate[0],
         m2 = splitedEndDate[1],
         y2 = splitedEndDate[2]
 
-    var n2 = dayNumberInYear(d2, m2, y2);
-    var n1 = dayNumberInYear(d1, m1, y1);
+    let n2 = dayNumberInYear(d2, m2, y2);
+    let n1 = dayNumberInYear(d1, m1, y1);
 
     if (y1 === y2) {
         return (n2 - n1 - 1);
