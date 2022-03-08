@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { modalTriggerOff, selectModalStatus } from '../projectForm/formSlice.js';
+import { modalTriggerOff, selectModalStatus } from '../../store/reducers/formSlice.js';
 
 import './modal.css'
 

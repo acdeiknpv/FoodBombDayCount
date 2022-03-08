@@ -1,6 +1,6 @@
 import './history.css'
 import { useSelector } from 'react-redux';
-import { selectHistory } from '../projectForm/formSlice.js'
+import { selectHistory } from '../../store/reducers/formSlice.js'
 
 function History() {
 

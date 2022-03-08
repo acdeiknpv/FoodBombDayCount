@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { dateCounter } from '../../services/dateCounter/dateCounter';
 import { dateOrder, dateVerifier } from '../../services/dateVerifier/dateVerifier';
 
-import { historyAdd, modalTriggerOn } from './formSlice.js';
+import { historyAdd, modalTriggerOn } from '../../store/reducers/formSlice.js';
 
 import './projectForm.css';
 
