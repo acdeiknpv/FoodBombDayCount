@@ -31,26 +31,26 @@ class ProjectForm extends React.Component {
             if (dateOrder(this.state.startDate, this.state.endDate) !== -1) {
                 let dayDifference = dateCounter(this.state.startDate, this.state.endDate);
                 this.props.handleHistory(this.state.startDate, this.state.endDate, dayDifference);
-                this.setState({modal: true, modalType: 0, modalMessage: "Data pushed"});
+                this.setState({ modal: true, modalType: 0, modalMessage: "Data pushed" });
             }
             else {
-                this.setState({modal: true, modalType: -1, modalMessage: "Start Date must be set earlier than the End Date"});
+                this.setState({ modal: true, modalType: -1, modalMessage: "Start Date must be set earlier than the End Date" });
                 return -1;
             };
         } else {
-            this.setState({modal: true, modalType: -1, modalMessage: "Respect Format: DD/MM/YYYY with 1900 < Year < 3000"});
+            this.setState({ modal: true, modalType: -1, modalMessage: "Respect Format: DD/MM/YYYY with 1900 < Year < 3000" });
             return -1;
         };
     }
 
     closeModal() {
-        this.setState({modal: false});
+        this.setState({ modal: false });
     }
 
     render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={ this.handleSubmit }>
 
                     <div className='alignCenter'>
                         <div className="startDate">
@@ -69,8 +69,8 @@ class ProjectForm extends React.Component {
                     </div>
 
                 </form>
-                <div className={!this.state.modal ? 'hidden' : ''}>
-                    <Modal type={this.state.modalType} message={this.state.modalMessage}/>
+                <div className={ !this.state.modal ? 'hidden' : '' }>
+                    <Modal type={ this.state.modalType } message={ this.state.modalMessage }/>
                 </div>
             </div>
         );
