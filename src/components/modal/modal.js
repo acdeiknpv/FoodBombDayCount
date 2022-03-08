@@ -1,21 +1,27 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { modalTriggerOff, selectModalStatus } from '../projectForm/formSlice.js';
 
-class Modal extends React.Component {
-    render() {
-        let modal = '';
-        if (this.props.type === 0) {
-            modal = <div className="alert alert-success" role="alert">
-                {this.props.message}
-            </div>;
-        } else {
-            modal = <div className="alert alert-danger" role="alert">
-                {this.props.message}
-            </div>
-        }
+import './modal.css'
 
-        return (
-            modal
-        )
+function Modal() {
+
+    const modalStatus = useSelector(selectModalStatus);
+    const dispatch = useDispatch();
+
+    let className = modalStatus.modal ? '' : 'hidden ';
+    className += "alert";
+
+    if (modalStatus.modalType === 0) {
+        className += " alert-success";
+    } else {
+        className += " alert-danger";
     }
+
+    return (
+            <div className={className} role="alert" onClick={() => dispatch(modalTriggerOff())}>
+                {modalStatus.modalMessage}
+            </div>
+    )
 }
 export default Modal;
